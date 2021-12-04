@@ -1,0 +1,32 @@
+{
+  "name": "pd_hourscontrol",
+  "version": "1.0.0",
+  "description": "Desafio técnico para o processo seletivo da PD Soluções",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rafaeldco/pd_hourscontrol.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rafaeldco/pd_hourscontrol/issues"
+  },
+  "homepage": "https://github.com/Rafaeldco/pd_hourscontrol#readme",
+  "dependencies": {
+    "date-fns": "^2.27.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "knex": "^0.95.14",
+    "pg": "^8.7.1",
+    "yup": "^0.32.11",
+    "yup-locales": "^1.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
