@@ -2,7 +2,7 @@ const knex = require('../conexao');
 const { schemaCadastrarUsuario } = require('../schema/schemaUsuario');
 
 const cadastrarUsuario = async (req, res) => {
-    const { name, squad_id } = req.body;
+    const { name, squad_id, user_estimated_hours } = req.body;
 
     try {
         await schemaCadastrarUsuario.validate(req.body);
@@ -13,7 +13,7 @@ const cadastrarUsuario = async (req, res) => {
             return res.status(404).json({ mensagem: 'Squad não encontrado.' });
         }
 
-        const cadastroUsuario = await knex('usuario').insert({ name, squad_id }).returning('*');
+        const cadastroUsuario = await knex('usuario').insert({ name, squad_id, user_estimated_hours }).returning('*');
 
         if (!cadastroUsuario) {
             return res.status(400).json({ mensagem: 'Não foi possível cadastrar o usuário.' });

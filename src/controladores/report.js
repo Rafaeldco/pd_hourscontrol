@@ -14,7 +14,6 @@ const cadastrarReport = async (req, res) => {
         }
 
         const cadastroReport = await knex('report').insert({ description, user_id, spent_hours }).returning('*');
-        const atualizarHoras = await knex('usuario').where('id', user_id).increment('user_estimated_hours', spent_hours);
 
         if (!cadastroReport) {
             return res.status(400).json({ mensagem: 'Não foi possível inserir o report.' });
