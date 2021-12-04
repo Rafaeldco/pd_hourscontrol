@@ -12,7 +12,7 @@ DROP TABLE IF EXISTS usuario CASCADE;
 CREATE TABLE usuario (
   id serial PRIMARY KEY,
   name varchar(50) NOT NULL,
-  user_estimated_hours int DEFAULT 0,
+  user_estimated_hours int,
   squad_id int REFERENCES squad(id) NOT NULL
  );
 
